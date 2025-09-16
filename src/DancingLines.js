@@ -178,37 +178,30 @@ function DancingLines(props) {
   /**
    * Loop the colors of tendrils
    */
-  const loop = function () {
-    debug && console.log("loop");
-    if (!runningRef.current || !canvasRef.current) return;
-    const ctx = canvasRef.current.getContext("2d");
-    const tendrils = tendrilsRef.current;
-    const frame = frameRef.current;
-    ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.globalCompositeOperation = "lighter";
-    ctx.strokeStyle = "hsla(" + Math.round(hue.update()) + ",90%,50%,0.25)";
-    ctx.lineWidth = 1;
-    if (frame % 60 === 0) {
-      debug &&
-        console.log(
-          hue.update(),
-          Math.round(hue.update()),
-          hue.phase,
-          hue.offset,
-          hue.frequency,
-          hue.amplitude,
-        );
-    }
-    for (let i = 0, tendril = void 0; i < trails; i++) {
-      tendril = tendrils[i];
-      tendril.update();
-      tendril.draw();
-    }
-    frameRef.current = frame + 1;
-    requestAnimationFrame(loop);
-  };
+const loop = function () {
+  if (!runningRef.current || !canvasRef.current) return;
+  const ctx = canvasRef.current.getContext("2d");
+  const tendrils = tendrilsRef.current;
+  const frame = frameRef.current;
+
+  ctx.globalCompositeOperation = "source-over";
+  ctx.fillStyle = backgroundColor;
+  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+  ctx.globalCompositeOperation = "lighter";
+  ctx.strokeStyle = "hsla(120,90%,50%,0.25)"; // fixed green
+  ctx.lineWidth = 1;
+
+  for (let i = 0, tendril = void 0; i < trails; i++) {
+    tendril = tendrils[i];
+    tendril.update();
+    tendril.draw();
+  }
+
+  frameRef.current = frame + 1;
+  requestAnimationFrame(loop);
+};
+
   /**
    * Adjust canvas size when the window gets resized
    */
