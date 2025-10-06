@@ -13,7 +13,7 @@ h1.landing_title {
   width:100vw;
 }
 
-p {
+p, a {
   text-align: center;
   z-index: 2;
   font-size: 48px;
@@ -21,6 +21,7 @@ p {
   text-shadow: #22ff00 5px 0 5px;
   max-width: 95vw;
 }
+
 
 .dvd img{
     filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
