@@ -75,7 +75,10 @@ function App() {
         <p>
           You are really not meant to see this its just a landing page for all
           my stuffs :)
+          <br />
+          <a href="https://music.markob.dev">Go to my music site</a>
         </p>
+
       </main>
     </>
   );
