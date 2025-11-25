@@ -1,43 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
- body {
-     font-family: "Science Gothic", sans-serif;
-     font-weight:normal;
-     margin: 0;
-     background-image: url("https://mcdn.wallpapersafari.com/medium/37/54/M4phV9.jpg") 
+@import url("https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap");
+body {
+  font-family: "Science Gothic", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  /* background-image: url("https://mcdn.wallpapersafari.com/medium/37/54/M4phV9.jpg"); */
+  background-color: #121212;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='200' width='200' viewBox='0 0 200 200'%3E %3Cpolygon points='25,0 75,0 0,75 0,25' style='fill:%23202A2A;' /%3E %3Cpolygon points='125,0 175,0 0,175 0,125' style='fill: %23202A2A;' /%3E %3Cpolygon points='200,25 200,75 75,200 25,200' style='fill:%23202A2A;' /%3E %3Cpolygon points='200,125 200,175 175,200 125,200' style='fill:%23202A2A;' /%3E %3C/svg%3E");
+  background-size: 16px;
+  background-attachment: fixed;
 }
 html {
   overflow: hidden;
   height: 100%;
-
 }
 body {
   color: white;
   overflow: auto;
   height: 100%;
 }
- main {
-     margin: 0 25vw;
+main {
+  margin: 0 25vw;
 }
- @media screen and (max-width: 800px) {
-     main {
-         margin: 0 5vw;
-    }
-    #top-banner {
-      width: 90vw !important;
-    }
+@media screen and (max-width: 800px) {
+  main {
+    margin: 0 5vw;
+  }
+  #top-banner {
+    width: 90vw !important;
+  }
 }
 a {
-   text-decoration: underline;
-     color: inherit;
-    
+  text-decoration: underline;
+  color: inherit;
 }
-.lain-container {
-  display: grid;
-  grid-template-columns: 30% 70%;
-}
-
 #lain-text {
   z-index: 5;
+  font-size: 16px;
 }
 
 #marquee {
@@ -60,9 +58,9 @@ iframe:hover {
   filter: none;
 }
 .book-container {
-      width: 100%;
-      height: 100%;
-      position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 #book {
   filter: saturate(0);
@@ -72,7 +70,7 @@ iframe:hover {
   top: 65%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  }
+}
 #lain {
   filter: saturate(0);
   margin: 0;
@@ -86,7 +84,6 @@ iframe:hover {
   font-family: Arial, sans-serif;
   font-size: small;
   color: white;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -125,154 +122,189 @@ iframe:hover {
   justify-items: center;
 }
 
-
 #selected {
-  color: #59C5BD
+  color: #59c5bd;
 }
- .banner-container {
-     width: 100%;
-     height: 250px;
-     margin-bottom: 10px;
+.banner-container {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 10px;
 }
 #top-banner {
-filter: brightness(0) saturate(100%) invert(40%) sepia(7%) saturate(2756%) hue-rotate(127deg) brightness(93%) contrast(97%);
+  filter: brightness(0) saturate(100%) invert(32%) sepia(54%) saturate(451%)
+    hue-rotate(126deg) brightness(94%) contrast(93%);
   height: 250px;
   width: 50vw;
 }
- .nav-container {
-     margin-top: 0;
-     background-color:#28716C;
-     display: flex;
-     text-align: center;
+.nav-container {
+    border: 2px solid #141414;
+  margin-top: -2px;
+  background-color: #28716c;
+  display: flex;
+  text-align: center;
 }
- .nav-link {
-     font-weight: normal;
-     margin: 0 10px;
-     width: 25%;
-     list-style-type: none;
+.nav-link {
+  font-weight: normal;
+  margin: 0 10px;
+  width: 25%;
+  list-style-type: none;
+  padding: 5px;
 }
 .nav-link a {
   text-decoration: none;
 }
-#soon {
-  font-size: 8px;
+
+#title {
+  font-weight: bold;
+  padding: 0 20px 0 15px;
+  background-color: #28716c;
+  display: inline-block;
+  border: 2px solid #141414;
+  border-bottom: none;
+  border-right: none;
+  margin: 0;
+  min-height: 50px;
 }
- #title {
-     font-weight: bold;
-     clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
-     padding-right: 20px;
-     background-color:#28716C;
-     display: inline;
+
+#notch {
+  position: relative;
+  clip-path: polygon(0 0, 50% 0, 100% 100%, 0% 100%);
+  background-color: black;
+  width: 54px;
+  height: 50px;
+  z-index: 10; /* on top of the border layer */
+  border-top: 2px solid #000;
+}
+
+/* "Border" behind the notch */
+#notch::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 52px;  /* 2px wider than notch */
+  height: 50px;
+  background-color: #28716c; /* border color */
+  clip-path: polygon(0 0, 48% 0, 100% 100%, 0% 100%);
+  z-index: 0;  /* behind the main notch */
+}
+
+
+
+.titlewrapper {
+  display: flex;
+  align-items: flex-start; /* aligns top edges; can use center if desired */
+  gap: 0; /* optional, in case you want spacing */
 }
 #gbook {
   font-size: 8px;
-  text-decoration: none;
-} 
+}
 .title-line {
-   margin: 0;
-     font-size: 16px;
-          background-color: #28716C;
-
+  margin: 0;
+  font-size: 16px;
+  background-color: #28716c;
+  color: #222222;
+  padding-left: 8px;
 }
- .date-container {
-     margin: 0;
-     background-color: #28716C;
+.date-container {
+  margin: 0;
+  background-color: #28716c;
 }
- .cl-container {
-     position: sticky;
-     top: 0;
-     background-color: #28716C;
+.cl-container {
+  position: sticky;
+  top: 0;
+  background-color: #28716c;
 }
- .change-log-list {
-     padding: 0;
-     list-style-type: none;
+.change-log-list {
+  padding: 0;
+  list-style-type: none;
 }
- .change-log-list a {
-     margin: 5px;
-    
+.change-log-list a {
+  margin: 5px;
 }
 .change-log-list p {
   margin: 5px;
-     font-size: 12px;
+  font-size: 12px;
 }
- .parent > div {
-     overflow: scroll;
-     color: white;
-          box-shadow: -2px 1px 0 #141414,-2px 2px 0 #141414,-3px 3px 0 #141414;
-     border: 6px solid #141414;
-     outline: 4px solid #3D3D3D;
-     outline-offset: -5px;
-          background-color: #292929;
-
+.parent > div {
+  overflow: scroll;
+  color: white;
+  box-shadow: -2px 1px 0 #141414, -2px 2px 0 #141414, -3px 3px 0 #141414;
+  border: 6px solid #141414;
+  outline: 4px solid #3d3d3d;
+  outline-offset: -5px;
+  background-color: #292929;
 }
 .userdate {
-  display:flex;
+  display: flex;
   margin-top: -5px;
 }
 #status {
   margin-top: -15px;
   font-size: 10px;
 }
- .parent {
-     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-     grid-template-rows: repeat(7, 1fr);
-     gap: 8px;
-     margin: 10px;
-     max-height: 70vh 
+.parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 8px;
+  max-height: 85vh;
 }
- .div1 {
-     min-height: 10vh;
-     grid-column: span 2 / span 2;
+.div1 {
+  min-height: 10vh;
+  grid-column: span 2 / span 2;
 }
- .div2 {
-     grid-column: span 2 / span 2;
-     grid-row: span 2 / span 2;
-     grid-column-start: 1;
-     grid-row-start: 2;
+.div2 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  max-height: 15vh; 
 }
- .div3 {
-   filter: saturate(0);
-     grid-column: span 2 / span 2;
-     grid-column-start: 1;
-     grid-row-start: 4;
+.div3 {
+  filter: saturate(0);
+  grid-column: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 4;
+  min-height: 30vh;
 }
 .div3:hover {
   filter: none;
 }
- .div4 {
-     grid-column: span 2 / span 2;
-     grid-row: span 3 / span 3;
-     grid-column-start: 1;
-     grid-row-start: 5;
-     height: 205px;
+.div4 {
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 1;
+  grid-row-start: 5;
+  height: 205px;
 }
- .div5 {
-   position: relative;
-     grid-column: span 4 / span 4;
-     grid-row: span 4 / span 4;
-     grid-column-start: 3;
-     grid-row-start: 1;
+.div5 {
+  background-image: url("https://www.publicdomainpictures.net/pictures/170000/velka/black-and-white-clouds.jpg");
+  position: relative;
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
+  grid-column-start: 3;
+  grid-row-start: 1;
 }
- .div6 {
-     background-color: #494949;
-     grid-column: span 2 / span 2;
-     grid-row: span 3 / span 3;
-     grid-column-start: 3;
-     grid-row-start: 5;
+.div6 {
+  background-color: #494949 !important;
+  grid-column: span 2 / span 2;
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+  grid-row-start: 5;
 }
- .div7 {
-     grid-column: span 2 / span 2;
-     grid-row: span 2 / span 2;
-     grid-column-start: 5;
-     grid-row-start: 6;
+.div7 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 6;
 }
- .div8 {
-     grid-column-start: 5;
-     grid-row-start: 5;
+.div8 {
+  grid-column-start: 5;
+  grid-row-start: 5;
 }
- .div9 {
-     grid-column-start: 6;
-     grid-row-start: 5;
+.div9 {
+  grid-column-start: 6;
+  grid-row-start: 5;
 }
- 
+

@@ -1,29 +1,27 @@
 import "./App.css";
 import ErrorBoundary from "./ErrorBoundary.tsx"
 import ChangeLog from "./ChangeLog.tsx"
-import lain from "./image.png"
+import { NowPlaying } from "./Music.tsx"
 function Home() {
   return (
     <>
       <main>
-        <div className="banner-container">
-          <img src="https://www.pngall.com/wp-content/uploads/15/City-Skyline-PNG-Pic.png" alt="Top Banner" id="top-banner" />
-        </div>
-        <br />
         <nav>
-          <h1 id="title">markob.dev</h1>
+          <div className="titlewrapper">
+            <h1 id="title">markob.dev</h1>
+            <div id="notch"></div></div>
           <ul className="nav-container">
-            <li id="selected" className="nav-link">home</li>
+            <li id="selected" className="nav-link"><a href="home">home</a></li>
             <li className="nav-link">
               <a href="about">about</a>
             </li>
             <li className="nav-link"><a href="https://music.markob.dev">music</a></li>
-            <li className="nav-link">minecraft <span id="soon">(coming soon)</span></li>
+            <li className="nav-link">minecraft</li>
           </ul>
         </nav>
         <div className="parent">
           <div className="div1">
-            <h2 className="title-line">Status</h2>
+            <h2 className="title-line">status</h2>
             <div className="userdate">
               <p>
                 <strong>markob</strong></p>
@@ -34,7 +32,9 @@ function Home() {
             </div>
           </div>
           <ErrorBoundary fallback={<div>⚠ Listening unavailable</div>}>
-            <div className="div2">Listening to.. (coming soon)</div>
+            <div className="div2">
+              <h2 className="title-line">music</h2>
+              <NowPlaying /></div>
           </ErrorBoundary>
 
           <div className="div3">
@@ -46,6 +46,14 @@ function Home() {
               <img src="https://capstasher.neocities.org/88x31Buttons/anybestviewed.gif" alt="browser" />
               <img src="https://capstasher.neocities.org/88x31Buttons/anthrax.gif" alt="anthrax" />
               <img src="https://capstasher.neocities.org/88x31Buttons/button.jpg" alt="tomato" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/imaginaryland.gif" alt="land" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/konko.gif" alt="death" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/logo_g.gif" alt="panda" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/neocities_hosting.gif" alt="neocities" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/notperfect.gif" alt="notperfect" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/otherbutton.png" alt="cereal" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/pseudocinnabar.gif" alt="pseudocinnabar" />
+              <img src="https://capstasher.neocities.org/88x31Buttons/rotteen.gif" alt="rotteen" />
             </div>      </div>
           <div className="div4"><iframe src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
           <div className="div5">
@@ -53,8 +61,8 @@ function Home() {
               i like scrolling text | lets all love lain | check out music at music.markob.dev | or don't | we major? | listen to mf doom, talking heads, and simon and garfunkel | i like weather | i like orange | i like blue
             </marquee>
             <div className="lain-container">
-              <div id="lain-text"><h1>welcome to markob.dev</h1></div>
-              <img src={lain} alt="lain" id="lain-banner" />
+              <div id="lain-text"><h1>welcome to markob.dev</h1>
+                <p>Stuff coming soon, (wii weather channel remake?)</p></div>
             </div>
           </div>
 
