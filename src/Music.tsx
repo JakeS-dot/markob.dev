@@ -6,6 +6,7 @@ type Track = {
   album?: { '#text': string };
   image?: { size: string; '#text': string }[];
   '@attr'?: { nowplaying?: string };
+  url: string;
 };
 
 type RecentTracksResponse = {
@@ -56,7 +57,6 @@ export const NowPlaying: React.FC = () => {
     return <div>Not listening to anything right now.</div>;
   }
 
-  const isNowPlaying = currentTrack['@attr']?.nowplaying === 'true';
 
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
