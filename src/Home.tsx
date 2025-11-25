@@ -57,7 +57,7 @@ function Home() {
             </div>      </div>
           <div className="div4"><iframe src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
           <div className="div5">
-            <marquee className="title-line" id="marquee" scrollAmount="25">
+            <marquee className="title-line" id="marquee" scrollAmount={25}>
               i like scrolling text | lets all love lain | check out music at music.markob.dev | or don't | we major? | listen to mf doom, talking heads, and simon and garfunkel | i like weather | i like orange | i like blue
             </marquee>
             <div className="lain-container">
