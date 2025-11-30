@@ -38,6 +38,21 @@
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
 }
+.button-box {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+#button-code pre, #button-code code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+#button-code {
+  grid-column: 2;
+}
 .adiv1 {
     grid-column: span 3 / span 3;
 }
@@ -85,15 +100,23 @@
 .adiv6 {
     grid-column-start: 3;
     grid-row-start: 5;
+    width: 15vw;
 }
 .adiv6 p, .adiv5 p, .adiv7 p, .adiv7 p {
   text-align: center;
   margin: 5px;
   font-size: 14px;
+  height: 
+}
+
+.adiv4, .adiv5, .adiv6 {
+  height: auto;
+    align-self: start;  /* prevents stretching */
 }
 
 .adiv7 {
     grid-column-start: 4;
     grid-row-start: 5;
+    align-self: start;  /* prevents stretching */
 }
 

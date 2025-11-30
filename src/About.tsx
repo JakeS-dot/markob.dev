@@ -62,11 +62,25 @@ export default function About() {
             <p>this website is open source! view code <a href="https://github.com/JakeS-dot/markob.dev#">here</a></p>
           </div>
           <div className="adiv6">
-            <p>listen to mai at <a href="https://music.markob.dev">music.markob.dev</a></p>
+            <p>share my website:            <span>              <u>markob.dev</u>
+
+            </span>
+            </p>
+            <div className="button-box">
+              <div>
+                <img style={{ margin: 5 }} src="/markob.gif" alt="markob.dev button" />
+              </div>
+              <div id="button-code">
+                <pre>
+                  <code>
+                    {`<a href="https://markob.dev"><img src="https://markob.dev/markob.gif" alt="markob.dev button" /></a>`}
+                  </code>
+                </pre>
+              </div>
+            </div>
           </div>
           <div className="adiv7">
-            <p>share my website:            <span>              <u>markob.dev</u>
-            </span></p>
+            <p>listen to mai at <a href="https://music.markob.dev">music.markob.dev</a></p>
           </div>
         </div>
       </main >
