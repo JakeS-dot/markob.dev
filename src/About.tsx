@@ -68,7 +68,7 @@ export default function About() {
             </p>
             <div className="button-box">
               <div>
-                <img style={{ margin: 5 }} src="/markob.gif" alt="markob.dev button" />
+                <img style={{ margin: 5 }} src={`${import.meta.env.BASE_URL}markob.gif`} alt="markob.dev button" />
               </div>
               <div id="button-code">
                 <pre>
