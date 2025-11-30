@@ -68,12 +68,12 @@ export default function About() {
             </p>
             <div className="button-box">
               <div>
-                <img style={{ margin: 5 }} src={`${import.meta.env.BASE_URL}markob.gif`} alt="markob.dev button" />
+                <img style={{ margin: 5 }} src="https://i.imgur.com/HohVW9M.png" alt="markob.dev button" />
               </div>
               <div id="button-code">
                 <pre>
                   <code>
-                    {`<a href="https://markob.dev"><img src="https://markob.dev/markob.gif" alt="markob.dev button" /></a>`}
+                    {`<a href="https://markob.dev"><img src="https://i.imgur.com/HohVW9M.png" alt="markob.dev button" /></a>`}
                   </code>
                 </pre>
               </div>

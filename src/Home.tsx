@@ -46,7 +46,7 @@ function Home() {
               <img src="https://capstasher.neocities.org/88x31Buttons/pseudocinnabar.gif" alt="pseudocinnabar" />
               <img src="https://capstasher.neocities.org/88x31Buttons/rotteen.gif" alt="rotteen" />
               <img src="https://capstasher.neocities.org/88x31Buttons/gratis-sex-fotos.gif" alt="achtung" />
-              <img src={`${import.meta.env.BASE_URL}markob.gif`} alt="markob" />
+              <img src="https://i.imgur.com/HohVW9M.png" alt="markob" />
             </div>      </div>
           <div className="div5">
             <marquee className="title-line" id="marquee" scrollAmount={25}>
