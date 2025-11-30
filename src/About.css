@@ -1,0 +1,99 @@
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+.about-grid > div {
+  box-shadow: -2px 1px 0 #141414, -2px 2px 0 #141414, -3px 3px 0 #141414;
+  border: 6px solid #141414;
+  outline: 4px solid #3d3d3d;
+  outline-offset: -5px;
+  background-color: #292929;
+}    
+.term {
+  font-size: 14px;
+  display: grid;
+ grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    max-height: 25vh;
+    
+}
+#markob {
+ color: #59c5bd;
+}
+.matrix {
+  margin: 5px;
+}
+.items-title {
+  color: #7C9B9A;
+  font-weight: bold;
+}
+.logo img{
+  width: 190px;
+  height: auto;
+}
+.info {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+.adiv1 {
+    grid-column: span 3 / span 3;
+}
+
+.adiv2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+}
+.adiv2 p {
+  margin: 10px;
+  font-size: 2vh;
+  text-align: justify;
+  text-align-last: center;
+}
+#email {
+  font-size: 14px !important; 
+  text-align: center;
+}
+.adiv3 {
+    grid-column: span 5 / span 5;
+    grid-row-start: 2;
+}
+.adiv3 marquee {
+    color: white;
+    font-size: 18px;
+}
+
+.adiv4  {
+    grid-column: span 5 / span 5;
+    grid-row: span 2 / span 2;
+    grid-row-start: 3;
+}
+.adiv4 p {
+  margin: 5px;
+  font-size: 16px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.adiv5 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+}
+
+.adiv6 {
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+.adiv6 p, .adiv5 p, .adiv7 p, .adiv7 p {
+  text-align: center;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.adiv7 {
+    grid-column-start: 4;
+    grid-row-start: 5;
+}
+

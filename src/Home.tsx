@@ -11,7 +11,7 @@ function Home() {
             <h1 id="title">markob.dev</h1>
             <div id="notch"></div></div>
           <ul className="nav-container">
-            <li id="selected" className="nav-link"><a href="home">home</a></li>
+            <li id="selected" className="nav-link"><a href="/">home</a></li>
             <li className="nav-link">
               <a href="about">about</a>
             </li>
@@ -20,24 +20,15 @@ function Home() {
           </ul>
         </nav>
         <div className="parent">
-          <div className="div1">
-            <h2 className="title-line">status</h2>
-            <div className="userdate">
-              <p>
-                <strong>markob</strong></p>
-              <p style={{ marginLeft: 50 }}><em>today</em></p>
-            </div>
-            <p id="status">waiting for status.cafe to send my email...</p>
-            <div>
-            </div>
-          </div>
+
           <ErrorBoundary fallback={<div>⚠ Listening unavailable</div>}>
             <div className="div2">
               <h2 className="title-line">music</h2>
               <NowPlaying /></div>
           </ErrorBoundary>
 
-          <div className="div3">
+          <div className="div3"><iframe src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
+          <div className="div4">
             <div className="button-grid"><img src="https://capstasher.neocities.org/88x31Buttons/93.gif" alt="drpeper" />
               <img src="https://capstasher.neocities.org/88x31Buttons/5srvdSo.gif" alt="miku" />
               <img src="https://capstasher.neocities.org/88x31Buttons/59%20(copy%201).gif" alt="playstation" />
@@ -55,14 +46,13 @@ function Home() {
               <img src="https://capstasher.neocities.org/88x31Buttons/pseudocinnabar.gif" alt="pseudocinnabar" />
               <img src="https://capstasher.neocities.org/88x31Buttons/rotteen.gif" alt="rotteen" />
             </div>      </div>
-          <div className="div4"><iframe src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
           <div className="div5">
             <marquee className="title-line" id="marquee" scrollAmount={25}>
               i like scrolling text | lets all love lain | check out music at music.markob.dev | or don't | we major? | listen to mf doom, talking heads, and simon and garfunkel | i like weather | i like orange | i like blue
             </marquee>
             <div className="lain-container">
               <div id="lain-text"><h1>welcome to markob.dev</h1>
-                <p>Stuff coming soon, (wii weather channel remake?)</p></div>
+                <p>Stuff coming soon, (wii weather channel remake?) (minecraft soon)</p></div>
             </div>
           </div>
 
@@ -120,7 +110,6 @@ function Home() {
           <div className="div9">
             <a href="https://markob.atabook.org">
               <div className="book-container">
-                <h2 id="gbook" className="title-line">sign my guestbook</h2>
                 <img id="book" src="https://icons.iconarchive.com/icons/i/power-zaurus/32/guest-book-icon.png" alt="message-book" />
               </div>
             </a>

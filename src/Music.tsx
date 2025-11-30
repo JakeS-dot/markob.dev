@@ -64,7 +64,7 @@ export const NowPlaying: React.FC = () => {
         <img
           src={currentTrack.image.find(img => img.size === 'medium')?.['#text']}
           alt="Album art"
-          style={{ width: 64, height: 64, marginTop: -50 }}
+          style={{ width: 64, height: 64 }}
         />
       )}
       <div>
