@@ -279,16 +279,33 @@ iframe:hover {
   gap: 8px;
   min-height: 85vh;
 }
-
+.div1 {
+  grid-column: span 2 / span 2;
+}
+#statuscafe {
+    padding: .5em;
+    background-color: #292929;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+  font-size: 12px;
+    margin: 0 1em 0.5em 1em;
+}
 .div2 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
+  grid-row-start: 2;
   grid-column-start: 1;
+  grid-row-end: 3;
 }
 .div3 {
   grid-column: span 2 / span 2;
   grid-column-start: 1;
   grid-row: span 2;
+  grid-row-start: 6;
+  grid-row-end: 8;
   min-height: 180px;
 }
 .div4:hover {
@@ -298,8 +315,10 @@ iframe:hover {
   filter: saturate(0);
   grid-column: span 2 / span 2;
   grid-row: span 2;
-  grid-row-start: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
   grid-column-start: 1;
+  max-height: 25vh;
 
 }
 .div5 {
@@ -309,27 +328,39 @@ iframe:hover {
   grid-row: span 4 / span 5;
   grid-column-start: 3;
   grid-row-start: 1;
+  grid-row-end: 5;
 }
 .div6 {
   background-color: #494949 !important;
   grid-column: span 2 / span 2;
   grid-row: span 3 / span 3;
   grid-column-start: 3;
-  grid-row-start: 6;
+  grid-row-start: 5;
   grid-row-end: 8;
 }
 .div7 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 5;
-  grid-row-start: 6;
+  grid-row-start: 5;
   grid-row-end: 8;
 }
 .div8 {
   grid-column-start: 1;
-  grid-row-start: 7;
+  grid-row-start: 5;
 }
 .div9 {
   grid-column-start: 2;
-  grid-row-start: 7;
+  grid-row-start: 5;
+}
+
+#footer {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+  box-shadow: -2px 1px 0 #141414, -2px 2px 0 #141414, -3px 3px 0 #141414;
+  border: 4px solid #141414;
+  outline: 2px solid #3d3d3d;
+  outline-offset: -3px;
+
 }

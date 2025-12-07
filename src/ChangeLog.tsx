@@ -29,7 +29,7 @@ export default function Changelog() {
 
   useEffect(() => {
     getGithubChangelog()
-      .then((data) => setCommits(data.slice(0, 4)))
+      .then((data) => setCommits(data.slice(0, 5)))
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, []);

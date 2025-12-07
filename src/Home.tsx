@@ -20,7 +20,13 @@ function Home() {
           </ul>
         </nav>
         <div className="parent">
-
+          <div className="div1">
+            <div className="title-line">status</div>
+            <div id="statuscafe">
+              <div id="statuscafe-username"></div>
+              <div id="statuscafe-content"></div>
+            </div>
+          </div>
           <ErrorBoundary fallback={<div>⚠ Listening unavailable</div>}>
             <div className="div2">
               <h2 className="title-line">music</h2>
@@ -118,6 +124,10 @@ function Home() {
           </div>
 
         </div>
+        <footer>
+          <h2 className="title-line" id="footer">
+            © 2025 markob. All rights reserved. Third-party images belong to their respective authors.</h2>
+        </footer>
       </main >
     </>
   )
