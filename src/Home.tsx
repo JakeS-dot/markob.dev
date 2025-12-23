@@ -2,6 +2,11 @@ import "./App.css";
 import ErrorBoundary from "./ErrorBoundary.tsx"
 import ChangeLog from "./ChangeLog.tsx"
 import { NowPlaying } from "./Music.tsx"
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+const images = ["https://file.garden/aTofjCD_EwuDgkJP/screenshot_1766469780.png", "https://file.garden/aTofjCD_EwuDgkJP/mc.markob.dev.jpg", "https://file.garden/aTofjCD_EwuDgkJP/laingif"];
+
 function Home() {
   return (
     <>
@@ -16,7 +21,7 @@ function Home() {
               <a href="about">about</a>
             </li>
             <li className="nav-link"><a href="https://music.markob.dev">music</a></li>
-            <li className="nav-link">minecraft</li>
+            <li className="nav-link"><a href="mc">minecraft</a></li>
           </ul>
         </nav>
         <div className="parent">
@@ -59,8 +64,39 @@ function Home() {
               i like scrolling text | lets all love lain | check out music at music.markob.dev | or don't | we major? | listen to mf doom, talking heads, and simon and garfunkel | i like weather | i like orange | i like blue
             </marquee>
             <div className="lain-container">
-              <div id="lain-text"><h1>welcome to markob.dev</h1>
-                <p>Stuff coming soon, (wii weather channel remake?) (minecraft soon)</p></div>
+              <div style={{ width: "100%", height: "100%" }}> {/* container size */}
+                <Carousel
+                  swipeable
+                  draggable
+                  showDots
+                  responsive={{
+                    superLargeDesktop: { breakpoint: { max: 4000, min: 0 }, items: 1 },
+                  }}
+                  infinite
+                  autoPlay
+                  autoPlaySpeed={3000}
+                  keyBoardControl
+                  containerClass="carousel-container"
+                  itemClass="carousel-item"
+                >
+                  {images.map((src) => (
+                    <div
+                      key={src}
+                      style={{ width: "100%", height: "100%" }}
+                    >
+                      <img
+                        src={src}
+                        alt="slide"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
             </div>
           </div>
 

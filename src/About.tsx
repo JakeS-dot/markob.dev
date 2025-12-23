@@ -17,7 +17,7 @@ export default function About() {
               <a href="about">about</a>
             </li>
             <li className="nav-link"><a href="https://music.markob.dev">music</a></li>
-            <li className="nav-link">minecraft</li>
+            <li className="nav-link"><a href="mc">minecraft</a></li>
           </ul>
         </nav>
         <div className="about-grid">
@@ -56,7 +56,7 @@ export default function About() {
             <marquee className="title-line" scrollAmount={15}>but wait: where do you get these awesome playlists at <a href="https://music.markob.dev">music.markob.dev</a>???</marquee>
           </div>
           <div className="adiv4">
-            <p>im glad you asked! all of these playlists are downloaded automaticaly from the youtube channel <a href="https://youtube.com/@mai_dq">mai</a>, who is a youtube playlist creator. been listening to mai since 2023, and one day i decided that i wanted to archive these. alot of playlists are removed and privated because of copyright. tacklists and desciptions of each playlist are avaibable on mai's doc <a href="https://docs.google.com/document/d/1ZBTsQ05rEUskPTNWz4--2dNgBV1-ydPIZLDnSnHRbvk/edit?usp=sharing">here</a>. filenames are not updated if the title changes. there are also all of the <a href="https://www.youtube.com/@otonashiyana">second channel</a> playlists there too.</p>
+            <p>im glad you asked! all of these playlists are downloaded automaticaly from the youtube channel <a href="https://youtube.com/@mai_dq">mai</a>, who is a youtube playlist creator. been listening to mai since 2023, and one day i decided that i wanted to archive these. alot of playlists are removed and privated because of copyright. tracklists and desciptions of each playlist are avaibable on mai's doc <a href="https://docs.google.com/document/d/1ZBTsQ05rEUskPTNWz4--2dNgBV1-ydPIZLDnSnHRbvk/edit?usp=sharing">here</a>. filenames are not updated if the title changes. there are also all of the <a href="https://www.youtube.com/@otonashiyana">second channel</a> playlists there too.</p>
           </div>
           <div className="adiv5">
             <p>this website is open source! view code <a href="https://github.com/JakeS-dot/markob.dev#">here</a></p>

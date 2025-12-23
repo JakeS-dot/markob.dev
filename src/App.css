@@ -272,7 +272,11 @@ iframe:hover {
   margin-top: -15px;
   font-size: 10px;
 }
-
+ @keyframes flash {
+            0% { color: inherit; }
+            50% { color: #171717; }
+            100% { color: inherit; }
+          }
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -306,7 +310,7 @@ iframe:hover {
   grid-row: span 2;
   grid-row-start: 6;
   grid-row-end: 8;
-  min-height: 180px;
+  aspect-ratio: 1/1;
 }
 .div4:hover {
   filter: none;
@@ -318,11 +322,9 @@ iframe:hover {
   grid-row-start: 3;
   grid-row-end: 5;
   grid-column-start: 1;
-  max-height: 25vh;
 
 }
 .div5 {
-  background-image: url("https://www.publicdomainpictures.net/pictures/170000/velka/black-and-white-clouds.jpg");
   position: relative;
   grid-column: span 4 / span 4;
   grid-row: span 4 / span 5;
