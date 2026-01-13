@@ -5,7 +5,7 @@ import { NowPlaying } from "./Music.tsx"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const images = ["https://file.garden/aTofjCD_EwuDgkJP/screenshot_1766469780.png", "https://file.garden/aTofjCD_EwuDgkJP/mc.markob.dev.jpg", "https://file.garden/aTofjCD_EwuDgkJP/laingif"];
+const images = ["https://file.garden/aTofjCD_EwuDgkJP/screenshot_1766469780.png", "https://file.garden/aTofjCD_EwuDgkJP/mc.markob.dev.png", "https://file.garden/aTofjCD_EwuDgkJP/laingif"];
 
 function Home() {
   return (
