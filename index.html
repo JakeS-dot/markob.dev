@@ -2,7 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script src="https://status.cafe/current-status.js?name=markob" defer></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+          const s = document.createElement("script");
+          s.src = "https://status.cafe/current-status.js?name=markob";
+          s.async = true;
+          document.body.appendChild(s);
+        });
+    </script>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>markob.dev</title>
