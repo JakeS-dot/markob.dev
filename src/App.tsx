@@ -3,6 +3,7 @@ import Home from "./Home";
 import About from "./About"
 import MobileWarning from "./MobileWarning"
 import Mc from "./Minecraft"
+import NotFound from "./NotFound";
 export default function App() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/mc" element={<Mc />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
