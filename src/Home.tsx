@@ -38,7 +38,7 @@ function Home() {
               <NowPlaying /></div>
           </ErrorBoundary>
 
-          <div className="div3"><iframe src="https://dimden.neocities.org/navlink/" name="neolink"></iframe></div>
+          <div className="div3"><iframe src="https://nvlk.dimden.dev/" name="neolink"></iframe></div>
           <div className="div4">
             <div className="button-grid"><img src="https://capstasher.neocities.org/88x31Buttons/93.gif" alt="drpeper" />
               <img src="https://capstasher.neocities.org/88x31Buttons/5srvdSo.gif" alt="miku" />
