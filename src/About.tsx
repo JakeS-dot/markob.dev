@@ -16,6 +16,7 @@ export default function About() {
             <li className="nav-link" id="selected" >
               <a href="about">about</a>
             </li>
+            <li className="nav-link"><a href="blog">blog</a></li>
             <li className="nav-link"><a href="https://music.markob.dev">music</a></li>
             <li className="nav-link"><a href="mc">minecraft</a></li>
           </ul>

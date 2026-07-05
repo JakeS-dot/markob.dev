@@ -4,8 +4,22 @@ import ChangeLog from "./ChangeLog.tsx"
 import { NowPlaying } from "./Music.tsx"
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { useEffect } from "react";
 
 const images = ["https://file.garden/aTofjCD_EwuDgkJP/screenshot_1766469780.png", "https://file.garden/aTofjCD_EwuDgkJP/mc.markob.dev.png", "https://file.garden/aTofjCD_EwuDgkJP/laingif"];
+
+function StatusCafe() {
+  useEffect(() => {
+    const s = document.createElement("script");
+    s.src = "https://status.cafe/current-status.js?name=markob";
+    s.async = true;
+    document.body.appendChild(s);
+
+    return () => s.remove();
+  }, []);
+
+  return null;
+}
 
 function Home() {
   return (
@@ -20,6 +34,7 @@ function Home() {
             <li className="nav-link">
               <a href="about">about</a>
             </li>
+            <li className="nav-link"><a href="blog">blog</a></li>
             <li className="nav-link"><a href="https://music.markob.dev">music</a></li>
             <li className="nav-link"><a href="mc">minecraft</a></li>
           </ul>
@@ -28,6 +43,7 @@ function Home() {
           <div className="div1">
             <div className="title-line">status</div>
             <div id="statuscafe">
+              <StatusCafe />
               <div id="statuscafe-username"></div>
               <div id="statuscafe-content"></div>
             </div>
@@ -162,7 +178,7 @@ function Home() {
         </div>
         <footer>
           <h2 className="title-line" id="footer">
-            © 2025 markob. All rights reserved. Third-party images belong to their respective authors.</h2>
+            © 2026 markob. All rights reserved. Third-party images belong to their respective authors.</h2>
         </footer>
       </main >
     </>
