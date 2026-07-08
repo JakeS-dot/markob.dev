@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 type Track = {
-  artist: { '#text': string };
+  artist: { "#text": string };
   name: string;
-  album?: { '#text': string };
-  image?: { size: string; '#text': string }[];
-  '@attr'?: { nowplaying?: string };
+  album?: { "#text": string };
+  image?: { size: string; "#text": string }[];
+  "@attr"?: { nowplaying?: string };
   url: string;
 };
 
@@ -15,8 +15,8 @@ type RecentTracksResponse = {
   };
 };
 
-const LASTFM_API_KEY = '83b84c7aadd7f1e5b3b40d617a2f7e47';
-const USERNAME = 'markobiscool';
+const LASTFM_API_KEY = "83b84c7aadd7f1e5b3b40d617a2f7e47";
+const USERNAME = "markobiscool";
 
 export const NowPlaying: React.FC = () => {
   const [currentTrack, setCurrentTrack] = useState<Track | null>(null);
@@ -38,7 +38,7 @@ export const NowPlaying: React.FC = () => {
           setCurrentTrack(track);
         }
       } catch (err: any) {
-        console.error('Error fetching Last.fm data', err);
+        console.error("Error fetching Last.fm data", err);
         setError(err.message);
       }
     };
@@ -57,12 +57,13 @@ export const NowPlaying: React.FC = () => {
     return <div>Not listening to anything right now.</div>;
   }
 
-
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+    <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
       {currentTrack.image && (
         <img
-          src={currentTrack.image.find(img => img.size === 'medium')?.['#text']}
+          src={
+            currentTrack.image.find((img) => img.size === "medium")?.["#text"]
+          }
           alt="Album art"
           style={{ width: 64, height: 64 }}
         />
@@ -71,18 +72,18 @@ export const NowPlaying: React.FC = () => {
         <div>
           <marquee>
             <a
-              href={currentTrack.url}  // Link to Last.fm track
+              href={currentTrack.url} // Link to Last.fm track
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'inherit', textDecoration: 'none' }}
+              style={{ color: "inherit", textDecoration: "none" }}
             >
               {currentTrack.name}
             </a>
           </marquee>
         </div>
         {currentTrack.album && (
-          <div style={{ fontSize: '0.9em', color: '#666' }}>
-            {currentTrack.album['#text']}
+          <div style={{ fontSize: "0.9em", color: "#666" }}>
+            {currentTrack.album["#text"]}
           </div>
         )}
         <div>
@@ -91,15 +92,13 @@ export const NowPlaying: React.FC = () => {
               href={currentTrack.url} // Also link artist/track together
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: 'inherit', textDecoration: 'none' }}
+              style={{ color: "inherit", textDecoration: "none" }}
             >
-              {currentTrack.artist['#text']} • {currentTrack.artist['#text']}
+              {currentTrack.artist["#text"]} • {currentTrack.artist["#text"]}
             </a>
           </marquee>
         </div>
       </div>
     </div>
-
   );
 };
-

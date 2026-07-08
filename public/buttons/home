@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="icon" type="image/x-icon" href="https://burgercities.neocities.org/Images/b57415b4114670c56dd2c2e9228d0f18.gif">
+      <title>BURGERNET.ONLINE</title>
+<style>
+
+* {
+    cursor: url(https://cur.cursors-4u.net/others/oth-7/oth665.cur), default;
+}
+
+body {
+    background-image: url(https://burgernet.online/Images2/burgerbg2.jpg);
+    background-size: auto;
+}
+
+.filter {
+  filter: saturate(2) brightness(1) contrast(1) opacity(1);
+  -webkit-filter: saturate(2) brightness(1) contrast(1) opacity(1);
+}
+
+.room {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    transform: scale(1.1);
+}
+
+.desk {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 90px;
+    left: 580px;
+    transform: scale(1.2);
+}
+
+.text {
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transform: translate(+20%, +20%);
+    font-size: 30px;
+    color: rgb(255, 224, 124);
+    font-family: "5PT5";
+    text-transform: uppercase;
+    text-shadow: 2px 2px orangered;    
+    z-index: 99;
+}
+.rotate {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    position: absolute;
+}
+.rotate:hover img, .rotate:focus img {
+    transform: rotate(-2deg);
+}
+.rotate:hover .text, a:focus .text {
+    opacity: 1;
+}
+
+a {
+    color: orange
+}
+
+a:hover {
+    color: yellowgreen;
+    font-style: italic;
+}
+
+marquee {
+  font-family: "Warioland";
+  font-size: 16px;
+  color: salmon;
+  text-shadow: 1px 1px rgb(255, 224, 124);
+  width: 100%;
+}
+
+.scrollin {
+    position: absolute;
+    top: 10px;
+    left: 180px;
+    width: 390px;
+}
+
+.updates {
+    background-image: url(https://burgernet.online/Images2/downloadwallapper.gif);
+    background-size: 100%;
+    color: salmon;
+    -webkit-text-stroke: 0.25px white; 
+    font-size: 11px;
+    font-family: "Warioland";
+    position: absolute;
+    top: 120px;
+    left: 179px;
+    width: 180px;
+    height: 160px;
+    padding: 5px;
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+.mood { 
+    position: absolute;
+    top: 260px;
+    left: 200px;
+    background-color: white;
+    border: 1px solid black;
+    width: 120px;
+    height: auto;
+    font-family: "Warioland";
+    color: black;
+    font-size: 12px;
+}
+
+.counter {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    width: auto;
+    height: 75px;
+}
+
+
+.cd {
+    position: absolute;
+    top: 340px;
+    left: 455px;
+    width: 150px;
+    height: 150px;
+    margin: 0 0 0 0;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+.player {
+    position: absolute;
+    top: 500px;
+    left: 445px;
+    width: 160px;
+    height: 20px;
+}
+
+.playing {
+    width: 50px;
+    height: 20px;
+    padding: 0px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+    font-family: "Warioland";
+    color: black;
+}
+
+.playing:hover {
+    background-color: #DAE6E6;
+    color: black;
+    font-style: italic;
+}
+
+.playing:active {
+    transform: scale(0.95);
+}
+
+i {
+    margin-left: 7px;
+}
+
+.playermarq {
+    font-family: "Warioland";
+    font-size: 12px;
+    color: black;
+    text-shadow: none;
+}
+
+@font-face {
+    font-family: "PixelOperator";
+    src: url(https://burgernet.online/Font/PixelOperator.ttf);
+}
+
+@font-face {
+    font-family: "5PT5";
+    src: url(https://burgernet.online/Font/5%E2%82%A75.ttf);
+}
+
+@font-face {
+    font-family: "MintSoda";
+    src: url(https://burgercities.neocities.org/Font/MintsodaLimeGreen13X16Regular-KVvzA.ttf);
+}
+
+@font-face {
+    font-family: "Warioland";
+    src: url(https://burgernet.online/Font/Warioland4chmc-VApe.ttf);
+}
+
+</style>
+<body>
+    
+    <div class="filter">
+
+    <div class="room">
+        <img src="https://burgernet.online/Images3/rug.png" style="position: absolute; top: 650px; left: 300px; width: 600px; height: 400px; pointer-events: none;">
+        <img src="https://burgernet.online/Images3/burgernetlogo.gif" style="position: absolute; top: -30px; left: 400px; height: 250px; width: auto; pointer-events: none;">
+        
+        <img src="https://burgernet.online/Images2/150000views.gif" style="position: absolute; top: 220px; left: 440px;">
+
+        <img src="https://burgernet.online/Images3/output-onlinepngtools%20(3).png" style="position: absolute; top: 250px; left: -100px; pointer-events: none; width: 650px;">
+        
+        <img class="cd" src="https://burgernet.online/Images2/underdisc.png">
+        <img src="https://burgernet.online/Images3/IMG_5286.png" style="position: absolute; top: 300px; left: 425px; pointer-events: none; width: 200px;">
+        <div class="player">
+            <marquee class="playermarq">Now playing... <img src="https://burgernet.online/Images2/music19.gif"> Alphys - Toby Fox | UNDERTALE Soundtrack</marquee>
+            <audio autoplay id="music">
+                    <source src="https://burgernet.online/Font/48%20-%20Alphys.mp3" type="audio/mp3">
+                </audio>
+                <button class="playing" onclick="playAudio()" type="button">
+                    PLAY
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="playing" onclick="pauseAudio()" type="button">
+                    PAUSE
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+               <button class="playing" onclick="muteAudio()" type="button">
+                    MUTE
+                    <i class="fa-solid fa-volume-xmark"></i>
+                </button>
+
+                <script>
+        // get element from html
+        var audioT = document.getElementById("music");
+
+        // use play() method to play music
+        function playAudio() {
+            audioT.play();
+        }
+
+        //  use pause() method to play music
+        function pauseAudio() {
+            audioT.pause();
+        }
+
+        //  use muted to pause music
+        function muteAudio() {
+            audioT.muted = !audioT.muted;
+        }
+                </script>
+
+        </div>
+        
+        <a href="https://burgernet.atabook.org/" class="rotate" style="top: 5px; left: 150px;">
+            <img src="https://burgercities.neocities.org/Images3/77c492ringu.png" width="120px"> 
+            <div class="text" style="top: 30%;">
+            GUESTBOOK</div>
+        </a>
+
+        <div class="updates">
+                    <b>07/05/26</b>: I can't believe I haven't worked on my site since last year. Oops...I finally got my CD burning and ripping page figured out!!! Check it out <a href="https://burgernet.online/nav/music/burning">here</a>!!!
+                    <br><b>11/19/25</b>: Haven't updated in a long time.... I'm working on re-doing a lot of the site and moving things around, but today I added a music player ^_^
+                    <br><b>09/15/25</b>: New guestbook host on Atabook!!! My old archive of messages is <a href="https://burgernet.online/nav/junkdrawer/gbookarchive">Here!</a>
+                    <br><b>08/30/25</b>: Removed my status and button from the homepage for now...my button and the code to add it to your site is in <a href="https://burgernet.online/nav/junkdrawer/">the Junkdrawer</a> now!!! Soon that page will look prettier but for now it's bare bones.
+                    <br><b>08/29/25</b>: Another month no update. Life has been cracking down on me T_T I finally got the shrine menu finished...next is the actual shrine pages!
+                    <br><b>07/25/25</b>: Nearly a month of no updates...ughhh.... Been slacking. Today, I added a warning/enter page to my site!!! It's long overdue.
+                    <br><b>06/26/25</b>: Added a button after all this time.... feel free to add to your site !!!!! I will be adding a button page with everyone's buttons on there soon. ^_^ Also added my statuscafe thingy mabobby.
+                    <br><b>.6/24/25</b>: Big huge fat update today... I have recoded a majority of my home page, and I'm working on adding a ton of new pages too!!!!! I always forget to update this changelog. I apologize.
+                    <br><b>05/09/25</b>: Forgot to add to the updates when I did this.... I am changing around the album book to have individual pages per album!!!! First two are finished but there will be more soon :3
+                    <br><b>04/24/25</b>: THANK YOU SO MUCH FOR OVER 100,000 VIEWS!!!!! I am so honored......>_<
+                    <br><b>04/17/25</b>: Finally set up a <a href="https://burgernet.online/nav/blog">blog page</a>!!!! Idk what I'm gonna post yet but..... I'll figure it out as I go.
+                    <br><b>04/12/25</b>: I didn't write an update last time I did some work here!!!! Last time, I added the guide I wrote about burning CDs to my music page. Today, we got a new custom domain!!!!!!!!! YAY!!!!!!!!!!!!!!!!!! So exciting ^_^
+                    <br><b>02/02/25</b>: Brand new homepage in the works....Idk if I like it or not BUT It's under construction a bit. Sorry for any bugs T_T
+                    <br><b>01/28/25</b>: YAYYY Finished up the art page to something I like a bit better. Hopefully you guys like it too. ^_^
+                    <br><b>01/20/25</b>: HAPPY LATE NEW YEAR!!! Haven't updated the site in a while. Debugging today. Maybe more too.....YAY!!!!
+                    <br><b>11/27/24</b>: It's been a while!!! Changed up the home page a little in the code so it's a bit more accessible and easily resize-able. Working on the junk drawer and movie pages soon, as well as art stuff ^_^
+                    <br><b>10/22/24</b>: Haven't updated in a hot hot minute. Homepage is decked out for spooky times!!!!!!! Also added music to my homepages >_< Hoping to get back into a schecule of regularly updating again soon.
+                    <br><b>6/21/24</b>: New music index page !!!! YAYYYY !!!!!! It's coming together :3
+                    <br><b>6/20/24</b>: No update for a bit but I am back from the grave.....Buggy cities page is now in the works!!!! There's gonna be a lot of cool bug stuff on there so stick around for more. :3
+                    <br><b>6/11/24</b>: Music page is officially up and running!!!! More albums to be added soon, it's nearly 12 AM and I am sleepy. Bless.
+                    <br><b>6/9/24</b>: BRAND NEW INDEX PAGE!!!!! YAAAYYYY :D Been working on revamping the site, many pages will be coming back because I miss them, as well as a bunch of new pages :D
+                    <br><b>6/4/24</b>: Haven't been here in a bit!!!! Got rid of a few pages because of being too busy for the upkeep.....they will be back when I have time I pinky swear.
+                    <br><b>5/8/24</b>: SO MANY UPDATES TODAY!!! Added lots of pages to the roster but a lot of them are under construction right now. I will get to it eventually...                        
+                    <br><b>5/8/24</b>: Back to the old site theme of fast food.....I missed it so much so we're back >:P Working on adding more stuff to the site too !!!!!! Stay tuned!!!!
+                    <br><b>5/2/24</b>: REVAMPING MORE!!! Yaaaayyyy :P
+                    <br><b>4/19/24</b>: It's been a while!! I have fully revamped the site.....still a work in progress though. YAYYYYY NEW BEGINNINGS :3
+                    <br><b>1/29/24</b>: Trying to change the entire aesthetic of the site but I am failing. Might be coding something entirely new in the near future.....stay tuned :3
+                    <br><b>1/27/24</b>: Added new links and edited my bio widget a bit :3 Happy late New Year!!!
+                    <br><b>12/30/23</b>: COMPLETELY REVAMPED THE SITE!!!!! WOWEE I was so tired of it looking kinda bad....
+                    <br><b>11/12/23</b>: First edit on the site in months. Will work on it soon....
+                    <br><b>08/06/23</b>: Changed the header logo!!!! YAYYY And a bunch of other changes but that is the biggest one. Also starting to add my little mascot :3
+                    <br><b>08/04/23</b>: Worked on the home page and now it's sorta done...:3
+                    <br><b>08/02/23</b>: SITE WAS FIRST EDITED!!! YAYAYAYYAYYYYY
+                    <br><b>01/04/22</b>: Site was created and then I let it sit for FOOOOORORRRREVEERRRR
+        </div>
+        <img src="https://burgernet.online/Images3/output-onlinepngtools%20(2).png" style="width: 350px; position: absolute; top: 35px; left: 90px; pointer-events: none;">
+
+        <img src="https://burgernet.online/Images3/IMG_3636.png" style="position: absolute; top: 335px; left: 150px; width: 120px; pointer-events: none;">
+
+        <img src="https://burgernet.online/Images3/headphones.png" style="position: absolute; left: 250px; top: 350px; width: 125px;">
+        <a href="https://burgernet.online/nav/journal" class="rotate" style="top: 350px; left: 260px;"> 
+            <img src="https://burgercities.neocities.org/Images3/ipod.png" width="40px">
+            <div class="text" style="top: 30%;">
+            JOURNAL</div>
+        </a>
+
+        <img src="https://burgernet.online/Images3/9c07174b5c0e6d5405356169d70a505d-removebg-preview.png" style="position: absolute; top: 450px; left: 250px; width: 150px;">
+        <a href="https://burgernet.online/nav/shrines" class="rotate" style="top: 435px; left: 210px;">
+            <img src="https://burgernet.online/Images3/e0fbb069574524f56ae94d5495231a6a-removebg-preview.png" width="130px">
+            <div class="text" style="top: 30%">
+            SHRINES</div>
+        </a>
+        <img src="https://burgernet.online/Images3/fddd1aa282b960dee02ec98e512cafee-removebg-preview.png" style="position: absolute; top: 530px; left: 180px; width: 100px; pointer-events: none;">
+    
+        <a href="https://burgernet.online/nav/stamps" class="rotate" style="top: 620px; left: 330px">
+            <img src="https://burgernet.online/Images3/43efbc7ea48a0ff735f4b7586d7d0fe8-removebg-preview.png" width="70px">
+            <div class="text" style="top: 30%;">
+            STAMP COLLECTION</div>
+        </a>
+        <img src="https://burgernet.online/Images3/books.png" style="position: absolute; top: 620px; left: 200px; transform: rotate(-3deg); width: 160px; pointer-events: none;">
+        
+        <img src="https://burgernet.online/Images2/neocity.gif" style="position: absolute; top: 850px; left: 225px;">
+
+        <div class="mood">
+            FEELING: <a href="https://www.imood.com/users/emmyburger"><img src="https://moods.imood.com/display/uname-emmyburger/trans-1/imood.gif" alt="The current mood of emmyburger at www.imood.com" border="0"></a>
+        </div>
+        
+    </div>
+
+
+    <div class="desk">
+        <img src="https://burgercities.neocities.org/Images3/IMG_36300.png" style="position: absolute; top: 0px; left: 0px; width: 750px; pointer-events: none;">
+
+        <div class="scrollin">
+            <marquee>&nbsp;WELCOME TO THE BURGERNET!!!! Take a look around....Or a hover and click around.</marquee>
+        </div>
+    
+
+        <a href="https://burgercities.neocities.org/nav/blog" class="rotate" style="top: 250px; left: 350px;">
+            <img src="https://burgercities.neocities.org/Images3/IMG_3634.png" style="width: 220px;">
+            <div class="text" style="top: 30%;">
+            BLOG</div>
+        </a>
+        
+        <a href="https://burgercities.neocities.org/nav/htmlcss" class="rotate" style="top: 460px; left: 350px;">
+            <img src="https://burgercities.neocities.org/Images3/IMG_3635.png" style="width: 220px;">
+            <div class="text" style="top: 30%;"> 
+            CODING STUFF</div>
+        </a>
+
+        <img src="https://burgercities.neocities.org/Images3/cds.png" width="100px" style="position: absolute; top: 250px; left: 260px; pointer-events: none;">
+        <a href="https://burgercities.neocities.org/nav/music/" class="rotate" style="top: 320px; left: 180px;">
+            <img src="https://burgercities.neocities.org/Images3/IMG_3632.png" style="width: 150px;">
+            <div class="text" style="top: 30%;"> 
+            MUSIC STUFF</div>
+        </a>
+
+        <a href="https://burgercities.neocities.org/nav/aboutme" class="rotate" style="top: 120px; left: 310px;">
+            <img src="https://burgercities.neocities.org/Images3/books2.png" style="width: 140px;">
+            <div class="text" style="top: 30%;"> 
+            ABOUT ME</div>
+        </a>
+        
+        <a href="https://trailerparkia.neocities.org" class="rotate" style="top: 90px; left: 450px;">
+            <img src="https://burgercities.neocities.org/Images3/IMG_3644.png" style="width: 60px;">
+            <div class="text" style="top: 30%;"> 
+            TRAILERPARKIA</div>
+        </a>
+
+        <img src="https://burgercities.neocities.org/Images3/sonico.png" width="50px" style="position: absolute; top: 110px; left: 450px; pointer-events: none;">
+        <a href="https://burgercities.neocities.org/nav/junkdrawer" class="rotate" style="top: 100px; left: 480px;">
+            <img src="https://burgercities.neocities.org/Images3/monkey.png" style="width: 110px;">
+            <div class="text" style="top: 30%;"> 
+            OTHER JUNK</div>
+        </a>
+        
+        <a href="https://burgercities.neocities.org/nav/moviebook/" class="rotate" style="top: 160px; left: 170px;">
+            <img src="https://burgercities.neocities.org/Images3/horrorvhs.jpg" style="width: 130px;">
+            <div class="text" style="top: 30%;"> 
+            MOVIE & BOOK STUFF</div>
+        </a>
+        
+        <img src="https://burgercities.neocities.org/Images3/beetle.png" width="60px" style="position: absolute; left: 175px; top: 80px; transform: rotate(15deg); pointer-events: none;">
+        <a href="https://burgercities.neocities.org/nav/bug/" class="rotate" style="top: 80px; left: 220px;">
+            <img src="https://burgercities.neocities.org/Images3/IMG_3642.png" style="width: 80px;">
+            <div class="text" style="top: 30%;"> 
+            BUG STUFF</div>
+        </a>
+
+        <img src="https://burgercities.neocities.org/Images3/dew.png" width="40px" style="position: absolute; top:350px; left: 520px; transform: rotate(10deg); pointer-events: none;">
+        <img src="https://burgercities.neocities.org/Images3/ritos.png" width="60px" style="position: absolute; top: 360px; left: 330px; transform: rotate(-10deg); pointer-events: none;">
+        
+        <img src="https://burgernet.online/Images3/f915aea316487d309a9c8491154827e7.png" style="position: absolute; top: 450px; left: 450px; width: 450px; pointer-events: none">
+        <img src="https://burgernet.online/Images3/fb221e8350c09e4a2537f329197e3e71-removebg-preview.png" style="position: absolute; top: 530px; left: 530px; transform: rotate(-10deg); width: 175px; pointer-events: none;">
+        <img src="https://burgernet.online/Images3/c49fce69574b5ef308b778b91ddb24fd-removebg-preview.png" style="position: absolute; top: 550px; left: 570px; width: 180px; pointer-events: none;">
+        
+        <a href="https://burgernet.online/nav/neighborhood" class="rotate" style="top: 600px; left: 400px;">
+            <img src="https://burgernet.online/Images3/5f1e7e1eb5b5ab94cce61eadf41afbd0-removebg-preview.png" width="200px">
+            <div class="text" style="top: 30%;">
+            NEIGHBORS</div>
+        </a>
+        
+        <div class="counter">
+            <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=39643644&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=39643644&main=1" /></noscript>
+        </div>
+    </div>
+
+    </div>
+
+    
+      
+<script language=javascript>
+    var rev = "fwd";
+    function titlebar(val){
+        var msg  = "BURGERNET.ONLINE";
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = ""+msg+"";
+        var le = msg.length;
+        if(rev == "fwd"){
+            if(pos < le){
+                pos = pos+1;
+                scroll = msg.substr(0,pos);
+                document.title = scroll;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "bwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+        else {
+            if(pos > 0) {
+                pos = pos-1;
+                var ale = le-pos;
+                scrol = msg.substr(ale,le);
+                document.title = scrol;
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+            else {
+                rev = "fwd";
+                timer = window.setTimeout("titlebar("+pos+")",speed);
+            }
+        }
+    }
+    titlebar(0);
+</script>
+
+</body>

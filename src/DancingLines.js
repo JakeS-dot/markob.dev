@@ -107,9 +107,7 @@ const HueOscillator = /** @class */ (function () {
   return HueOscillator;
 })();
 
-
-
-const DEFAULT_BACKGROUND_COLOR = '#080510'
+const DEFAULT_BACKGROUND_COLOR = "#080510";
 function DancingLines(props) {
   const _a = props.debug,
     debug = _a === void 0 ? false : _a,
@@ -178,29 +176,29 @@ function DancingLines(props) {
   /**
    * Loop the colors of tendrils
    */
-const loop = function () {
-  if (!runningRef.current || !canvasRef.current) return;
-  const ctx = canvasRef.current.getContext("2d");
-  const tendrils = tendrilsRef.current;
-  const frame = frameRef.current;
+  const loop = function () {
+    if (!runningRef.current || !canvasRef.current) return;
+    const ctx = canvasRef.current.getContext("2d");
+    const tendrils = tendrilsRef.current;
+    const frame = frameRef.current;
 
-  ctx.globalCompositeOperation = "source-over";
-  ctx.fillStyle = backgroundColor;
-  ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.globalCompositeOperation = "source-over";
+    ctx.fillStyle = backgroundColor;
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-  ctx.globalCompositeOperation = "lighter";
-  ctx.strokeStyle = "hsla(120,90%,50%,0.25)"; // fixed green
-  ctx.lineWidth = 1;
+    ctx.globalCompositeOperation = "lighter";
+    ctx.strokeStyle = "hsla(120,90%,50%,0.25)"; // fixed green
+    ctx.lineWidth = 1;
 
-  for (let i = 0, tendril = void 0; i < trails; i++) {
-    tendril = tendrils[i];
-    tendril.update();
-    tendril.draw();
-  }
+    for (let i = 0, tendril = void 0; i < trails; i++) {
+      tendril = tendrils[i];
+      tendril.update();
+      tendril.draw();
+    }
 
-  frameRef.current = frame + 1;
-  requestAnimationFrame(loop);
-};
+    frameRef.current = frame + 1;
+    requestAnimationFrame(loop);
+  };
 
   /**
    * Adjust canvas size when the window gets resized

@@ -14,7 +14,7 @@ interface Commit {
 
 async function getGithubChangelog(): Promise<Commit[]> {
   const res = await fetch(
-    "https://api.github.com/repos/JakeS-Dot/markob.dev/commits"
+    "https://api.github.com/repos/JakeS-Dot/markob.dev/commits",
   );
   if (!res.ok) {
     throw new Error("Failed to fetch commits");
@@ -39,21 +39,37 @@ export default function Changelog() {
 
   return (
     <>
-      <div className="cl-container">      <h2 className="title-line" style={{ marginTop: -10 }}>changelog</h2>
+      <div className="cl-container">
+        {" "}
+        <h2 className="title-line" style={{ marginTop: -10 }}>
+          changelog
+        </h2>
       </div>
       <ul className="change-log-list">
         {commits.map((commit) => (
           <li key={commit.sha}>
-            <div className="date-container"> <a href={commit.html_url} target="_blank" rel="noopener noreferrer">
-              <u>({new Date(commit.commit.author.date).toLocaleDateString()})</u>
-            </a>
+            <div className="date-container">
+              {" "}
+              <a
+                href={commit.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <u>
+                  ({new Date(commit.commit.author.date).toLocaleDateString()})
+                </u>
+              </a>
             </div>
             <p>{commit.commit.message}</p>
           </li>
         ))}
       </ul>
-      <a target="_blank" href="https://github.com/JakeS-dot/markob.dev/commit/eb4b87f11570af0788096cd3851c677ae5ea9dbc">see full log here</a>
+      <a
+        target="_blank"
+        href="https://github.com/JakeS-dot/markob.dev/commit/eb4b87f11570af0788096cd3851c677ae5ea9dbc"
+      >
+        see full log here
+      </a>
     </>
   );
 }
-

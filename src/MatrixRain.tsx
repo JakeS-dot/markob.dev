@@ -146,7 +146,10 @@ export default function MatrixRain(props: MatrixRainProps) {
 /* INIT & UPDATE                           */
 /* -------------------------------------- */
 
-function initializeState(props: MatrixRainProps, canvas: HTMLCanvasElement): MatrixState {
+function initializeState(
+  props: MatrixRainProps,
+  canvas: HTMLCanvasElement,
+): MatrixState {
   const context = canvas.getContext("2d");
   if (!context) throw new Error("CanvasRenderingContext2D not supported");
 
@@ -260,7 +263,11 @@ function createAnimationLoop(state: MatrixState) {
   return () => cancelAnimationFrame(state.animationId);
 }
 
-function updateAnimationLoop(state: MatrixState, time: number, nextUpdate: number) {
+function updateAnimationLoop(
+  state: MatrixState,
+  time: number,
+  nextUpdate: number,
+) {
   if (time > nextUpdate) {
     updateRainDrops(state);
     animateNextFrame(state);
@@ -271,7 +278,7 @@ function updateAnimationLoop(state: MatrixState, time: number, nextUpdate: numbe
   nextUpdate += state.delay * adjust;
 
   state.animationId = requestAnimationFrame((t) =>
-    updateAnimationLoop(state, t, nextUpdate)
+    updateAnimationLoop(state, t, nextUpdate),
   );
 }
 
@@ -288,7 +295,11 @@ function updateRainDrops(state: MatrixState) {
 
   for (const drop of Array.from(state.rainDrops)) {
     drop.y++;
-    if (drop.x >= state.gridCols || drop.y >= state.gridRows || Math.random() < dryProb) {
+    if (
+      drop.x >= state.gridCols ||
+      drop.y >= state.gridRows ||
+      Math.random() < dryProb
+    ) {
       state.rainDrops.delete(drop);
     }
   }
@@ -324,7 +335,6 @@ function fillBackground(state: MatrixState, useAlpha: boolean) {
   state.context.globalAlpha = 1;
 }
 
-
 function getColorGradient(
   props: MatrixRainProps,
 ): MatrixState["colorGradient"] {
@@ -344,10 +354,11 @@ function getColorGradient(
   }));
 }
 
-
 function updateForegroundStyle(state: MatrixState) {
-  const endX = state.gradientOrientation === "horizontal" ? state.containerWidth : 0;
-  const endY = state.gradientOrientation === "vertical" ? state.containerHeight : 0;
+  const endX =
+    state.gradientOrientation === "horizontal" ? state.containerWidth : 0;
+  const endY =
+    state.gradientOrientation === "vertical" ? state.containerHeight : 0;
 
   const gradient = state.context.createLinearGradient(0, 0, endX, endY);
   for (const { offset, color } of state.colorGradient) {
