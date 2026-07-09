@@ -247,7 +247,16 @@ function Links() {
             </div>
           </div>
           <div className="div3-l">
-            <marquee style={{ display: "flex", alignItems: 'center', backgroundColor: "var(--secondary-color)" }} className="title-line" id="marquee" scrollAmount={10}>
+            <marquee
+              style={{
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: "var(--secondary-color)",
+              }}
+              className="title-line"
+              id="marquee"
+              scrollAmount={10}
+            >
               {Object.entries(buttons).map(([path, src]) => (
                 <img
                   style={{ marginLeft: 10 }}
@@ -258,8 +267,105 @@ function Links() {
               ))}
             </marquee>
           </div>
-          {/*<div className="div4-l">4</div>*/}
-          {/*<div className="div5-l">5</div>*/}
+          <div className="div4-l">
+            <p className="title-line">cliques</p>
+            {/*<p className="clique-p">my seasons is <a href="https://cliques.shadow-lord.com/seasons" target="_blank">autumn</a> <img src="cliques/fall.png" alt="fall" /></p> */}
+            <p className="clique-p">
+              married to{" "}
+              <a href="https://cliques.gensoukai.net/spouse/" target="_blank">
+                Shane
+              </a>
+              <img
+                src="cliques/shane.png"
+                alt="shane"
+                title="Pixel Sweetheart"
+              />{" "}
+            </p>
+            <p className="clique-p">
+              i play the{" "}
+              <a
+                href="https://crispins-cafe.neocities.org/cliques"
+                rel="noopener noreferrer"
+              >
+                euphonium!{" "}
+              </a>
+              <img alt="trumpet" src="cliques/trumpet.gif" />
+            </p>
+            {/*<p className="clique-p">my favorite hot bevarage is <a href="https://cliques.shadow-lord.com/hot" target="_blank">green tea</a></p> */}
+            {/*}<p className="clique-p">mango green tea - <a href="https://boba.aquarel.nu">bubblelicious</a><img src="cliques/orange_3.gif" alt="boba" /></p> */}
+            <p className="clique-p">
+              <a href="http://joroki.neocities.org/cliques"> themed</a> //{" "}
+              <a
+                style={{ display: "flex" }}
+                href="https://joroki.neocities.org/cliques.html"
+              >
+                <img
+                  src="https://joroki.neocities.org/acpc-cool.png"
+                  alt="cool"
+                />
+              </a>
+            </p>
+            <div className="clique-p">
+              <link
+                rel="stylesheet"
+                href="https://killing-machine.neocities.org/cliques/invclique.css"
+              />
+              <div className="mcinv" style={{ display: "flex", fontSize: 12 }}>
+                <a href="https://killing-machine.neocities.org/">inventory</a> :{" "}
+                <img src="cliques/diamondore.png" />
+                <img src="cliques/redstonedust.png" />
+                <img src="cliques/diamondhoe.png" />
+              </div>
+            </div>
+            <p className="clique-p">
+              <a href="https://scented.minty.nu">scented</a> //{" "}
+              <span style={{ color: "#387262" }}>aquatic accord</span>
+            </p>
+            <p className="clique-p">
+              {" "}
+              <a href="http://cliqued.wings.nu/">my jam!!</a>{" "}
+              <img src="cliques/mint.png" /> "Luv (sic)"
+            </p>
+          </div>
+          <div className="div5-l">
+            <p className="title-line">webrings</p>
+            {/* <p className="clique-p">                        <div style={{ display: "flex", justifyContent: "center" }}> 
+              <a href="https://sakk.ie/off-platform?action=previous"><img src="https://sakk.ie/off-platform/widgets/offplatform-left.gif" /></a>
+              <a href="https://sakk.ie/off-platform/"><img src="https://sakk.ie/off-platform/widgets/offplatform-main.gif" alt="Off-Platform Webring" title="Off-Platform Webring" /></a>
+              <a href="https://sakk.ie/off-platform?action=next"><img src="https://sakk.ie/off-platform/widgets/offplatform-right.gif" /></a>
+            </div>
+            </p> */}
+            <div className="clique-p" style={{ backgroundColor: "#191919" }}>
+              <a
+                style={{ marginRight: 15 }}
+                href="https://hotlinewebring.club/markob/previous"
+              >
+                P
+              </a>
+              <p>hot-line webring</p>
+              <a
+                style={{ marginLeft: 15 }}
+                href="https://hotlinewebring.club/markob/next"
+              >
+                N
+              </a>
+            </div>
+            <div className="clique-p">
+              <div id="vocaring" className="small"></div>
+              <link
+                rel="stylesheet"
+                href="https://electric-tenshi.nekoweb.org/vocaring/vocaring.css"
+              />
+              <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-variables.js"></script>
+              <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-widget.js"></script>
+            </div>
+
+            {/* <div className="clique-p">
+              <div style={{ width: 135 }}>
+                <iframe style={{ border: "none", width: "100%" }} src="https://wiiring.jeith.com/snippet?site=https://markob.dev&variant=standard"></iframe>
+              </div>
+              </div> */}
+          </div>
         </div>
       </main>
     </>

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap");
 
 :root {
-  --primary-color: #28716c;
+  --primary-color: #27705b;
   --secondary-color: #292929;
   --bg-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E %3Cpolygon points='0,25 0,75 75,0 25,0' style='fill:%23184642;' /%3E %3Cpolygon points='0,125 0,175 175,0 125,0' style='fill:%23184642;' /%3E %3Cpolygon points='25,200 75,200 200,75 200,25' style='fill:%23184642;' /%3E %3Cpolygon points='125,200 175,200 200,175 200,125' style='fill:%23184642;' /%3E %3C/svg%3E");
 }
@@ -14,12 +14,18 @@ body {
   font-family: "Science Gothic", sans-serif;
   font-weight: normal;
   margin: 0;
-  /* background-image: url("https://mcdn.wallpapersafari.com/medium/37/54/M4phV9.jpg"); */
   background-color: #121212;
-  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='200' width='200' viewBox='0 0 200 200'%3E %3Cpolygon points='25,0 75,0 0,75 0,25' style='fill:%23202A2A;' /%3E %3Cpolygon points='125,0 175,0 0,175 0,125' style='fill: %23202A2A;' /%3E %3Cpolygon points='200,25 200,75 75,200 25,200' style='fill:%23202A2A;' /%3E %3Cpolygon points='200,125 200,175 175,200 125,200' style='fill:%23202A2A;' /%3E %3C/svg%3E"); */
-  background-image: var(--bg-pattern);
-  background-size: 16px;
-  background-attachment: fixed;
+
+  background-image:
+    var(--bg-pattern),
+    url("https://images.pixels.com/images/artworkimages/medium/3/bullet-hole-cracked-broken-window-tony-rubino-transparent.png");
+
+  background-size: 16px, 750px;
+  background-repeat: repeat, no-repeat;
+  background-position:
+    center,
+    top left;
+  background-attachment: fixed, fixed;
 }
 
 #show-warning {
@@ -468,7 +474,7 @@ iframe:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(16, 5vh);
-  gap: 8px;
+  gap: 12px;
 }
 .parent-links > div {
   overflow: scroll;
@@ -503,12 +509,23 @@ iframe:hover {
 }
 
 .div4-l {
+  margin-right: 20px;
   grid-row: span 5 / span 4;
   grid-row-start: 10;
   grid-row-end: 15;
 }
+.clique-p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+}
+.clique-p * {
+  margin: 3px;
+}
 
 .div5-l {
+  margin-left: 20px;
   grid-row: span 5 / span 4;
   grid-row-start: 10;
   grid-row-end: 15;
