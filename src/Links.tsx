@@ -269,7 +269,7 @@ function Links() {
           </div>
           <div className="div4-l">
             <p className="title-line">cliques</p>
-            {/*<p className="clique-p">my seasons is <a href="https://cliques.shadow-lord.com/seasons" target="_blank">autumn</a> <img src="cliques/fall.png" alt="fall" /></p> */}
+            <p className="clique-p">my seasons is <a href="https://cliques.shadow-lord.com/seasons" target="_blank">autumn</a> <img src="cliques/fall.png" alt="fall" /></p>
             <p className="clique-p">
               married to{" "}
               <a href="https://cliques.gensoukai.net/spouse/" target="_blank">
@@ -291,7 +291,7 @@ function Links() {
               </a>
               <img alt="trumpet" src="cliques/trumpet.gif" />
             </p>
-            {/*<p className="clique-p">my favorite hot bevarage is <a href="https://cliques.shadow-lord.com/hot" target="_blank">green tea</a></p> */}
+            <p className="clique-p">my favorite hot bevarage is <a href="https://cliques.shadow-lord.com/hot" target="_blank">green tea</a></p>
             {/*}<p className="clique-p">mango green tea - <a href="https://boba.aquarel.nu">bubblelicious</a><img src="cliques/orange_3.gif" alt="boba" /></p> */}
             <p className="clique-p">
               <a href="http://joroki.neocities.org/cliques"> themed</a> //{" "}
