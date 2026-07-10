@@ -19,9 +19,12 @@ type Target = "primary" | "secondary";
 
 function buildBgPattern(color: string) {
   const hex = color.replace("#", "%23");
-  const svg = `%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E %3Cpolygon points='0,25 0,75 75,0 25,0' style='fill:${hex};' /%3E %3Cpolygon points='0,125 0,175 175,0 125,0' style='fill:${hex};' /%3E %3Cpolygon points='25,200 75,200 200,75 200,25' style='fill:${hex};' /%3E %3Cpolygon points='125,200 175,200 200,175 200,125' style='fill:${hex};' /%3E %3C/svg%3E`;
+
+  const svg = `%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cline x1='-2' y1='-2' x2='10' y2='10' stroke='${hex}' stroke-width='1' stroke-linecap='square'/%3E%3C/svg%3E`;
+
   return `url("data:image/svg+xml,${svg}")`;
 }
+
 function darken(hex: string, factor: number) {
   const num = parseInt(hex.replace("#", ""), 16);
   const r = Math.round(((num >> 16) & 0xff) * factor);

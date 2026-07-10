@@ -3,7 +3,7 @@
 :root {
   --primary-color: #27705b;
   --secondary-color: #292929;
-  --bg-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E %3Cpolygon points='0,25 0,75 75,0 25,0' style='fill:%23184642;' /%3E %3Cpolygon points='0,125 0,175 175,0 125,0' style='fill:%23184642;' /%3E %3Cpolygon points='25,200 75,200 200,75 200,25' style='fill:%23184642;' /%3E %3Cpolygon points='125,200 175,200 200,175 200,125' style='fill:%23184642;' /%3E %3C/svg%3E");
+  --bg-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cline x1='-4' y1='-4' x2='12' y2='12' stroke='%23184542' stroke-width='1' stroke-linecap='square'/%3E%3C/svg%3E");
 }
 .react-multi-carousel-list,
 .react-multi-carousel-track,
@@ -11,21 +11,30 @@
   height: 100% !important;
 }
 body {
+  position: relative;
   font-family: "Science Gothic", sans-serif;
   font-weight: normal;
   margin: 0;
-  background-color: #121212;
+  background-color: #141414;
+  background-image: url("https://images.pixels.com/images/artworkimages/medium/3/bullet-hole-cracked-broken-window-tony-rubino-transparent.png");
+  background-size: 750px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-attachment: fixed;
+}
 
-  background-image:
-    var(--bg-pattern),
-    url("https://images.pixels.com/images/artworkimages/medium/3/bullet-hole-cracked-broken-window-tony-rubino-transparent.png");
-
-  background-size: 16px, 750px;
-  background-repeat: repeat, no-repeat;
-  background-position:
-    center,
-    top left;
-  background-attachment: fixed, fixed;
+body::before {
+  content: "";
+  position: fixed;
+  top: 60px;
+  right: -100px;
+  width: 550px;
+  height: 60px;
+  background: var(--primary-color);
+  transform: rotate(45deg);
+  transform-origin: center;
+  pointer-events: none;
+  z-index: 0;
 }
 
 #show-warning {
