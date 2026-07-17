@@ -303,7 +303,7 @@ function Links() {
                 green tea
               </a>
             </p>
-            {/*}<p className="clique-p">mango green tea - <a href="https://boba.aquarel.nu">bubblelicious</a><img src="cliques/orange_3.gif" alt="boba" /></p> */}
+            <p className="clique-p">mango green tea - <a href="https://boba.aquarel.nu">bubblelicious</a><img src="cliques/orange_3.gif" alt="boba" /></p>
             <p className="clique-p">
               <a href="http://joroki.neocities.org/cliques"> themed</a> //{" "}
               <a
@@ -371,11 +371,11 @@ function Links() {
               <script src="https://electric-tenshi.nekoweb.org/vocaring/vocaring-widget.js"></script>
             </div>
 
-            {/* <div className="clique-p">
+            <div className="clique-p">
               <div style={{ width: 135 }}>
                 <iframe style={{ border: "none", width: "100%" }} src="https://wiiring.jeith.com/snippet?site=https://markob.dev&variant=standard"></iframe>
               </div>
-              </div> */}
+            </div>
           </div>
         </div>
       </main>
